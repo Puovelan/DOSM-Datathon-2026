@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the SeasonShift team project and the DOSM Datathon 2026 report."
+title: "SeasonShift: A Data-Driven Tourism Pressure Index and Predictive Seasonality Model for Sustainable Tourism Planning in Malaysia"
+type: software
+version: 1.0.0
+date-released: 2026-09-22
+authors:
+  - family-names: Daniel
+    given-names: "Kalvinn Roy A/L"
+  - family-names: Shahrezad
+    given-names: "Arman Azad bin"
+  - family-names: Kumaresan
+    given-names: "Puovelan A/L"
+  - family-names: Vicneswaran
+    given-names: "Shamalan A/L"
