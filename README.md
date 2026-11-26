@@ -4,7 +4,6 @@
 
 SeasonShift is a team analytics project that examines how tourism pressure is distributed across Malaysia's states and federal territories. It combines a quarterly **Tourism Pressure Index (TPI)**, a **Prophet time-series forecast**, and a **visitor-redistribution policy scenario** in an interactive four-page Power BI dashboard.
 
-> This repository contains the submitted Power BI dashboard, the final project report, supporting datasets, and dashboard documentation. The original Python notebook/scripts used for upstream preparation and forecasting were not included in the materials provided for this repository; see [Reproducibility and limitations](#reproducibility-and-limitations).
 
 ## Dashboard preview
 
@@ -105,37 +104,11 @@ SeasonShift-Tourism-Analytics-Datathon-2026/
 └── CITATION.cff
 ```
 
-## Tools and technologies
+## Tools and technologies used
 
-- **Microsoft Power BI Desktop** — interactive dashboard and data model.
-- **Python 3.12 (Google Colab), pandas, Prophet** — described in the submitted dashboard guide as the upstream forecasting and data-preparation tools.
-- **Microsoft Excel and CSV** — data preparation and supporting data files.
-
-No Python notebook or source script was supplied with the final materials. The repository includes the final CSV outputs and Power BI file, but not the original code used to create all derived datasets or train the Prophet models.
-
-## How to view the dashboard
-
-1. Download or clone this repository.
-2. Install Microsoft Power BI Desktop.
-3. Open [`dashboard/SeasonShift_Dashboard.pbix`](dashboard/SeasonShift_Dashboard.pbix).
-4. Use the page tabs at the bottom to move between Overview, Heatmap, Forecast, and Policy.
-5. Use the available state, date/year, and policy controls to explore the dashboard.
-
-The supplied guide states that the report uses native Power BI visuals and that the data is embedded in the `.pbix` file. No custom visual or API key is required to view the submitted dashboard.
-
-## Reproducibility and limitations
-
-- **No upstream Python notebook/scripts supplied:** the original cleaning, TPI construction, and Prophet training code cannot be rerun from this repository alone.
-- **TPI formula not fully documented:** the report identifies the input components but does not provide a recoverable closed-form weighting formula. Do not infer or recreate it without the original notebook or calculation workbook.
-- **Derived state demand:** state-level demand is allocated from national arrivals using fixed spatial weights. It is not a directly observed state-level tourist-arrival series.
-- **Forecast evaluation:** forecast error/backtesting metrics were not included in the submitted materials.
-- **Policy scenario is assumption-based:** the receiving corridors are assumed to have sufficient capacity; the model does not establish this operationally.
-- **Slider behaviour:** the submitted guide describes the slider as linearly scaling a fixed baseline scenario. It should not be presented as a fresh optimisation or independent model run at every slider setting.
-- **Environmental indicators:** gross changes across states should not be called net national waste or carbon savings. The supplied BAU and policy national totals are effectively unchanged.
-- **External disruptions:** the report notes that the forecast does not account for black-swan events such as pandemics.
-- **Data coverage differs by source:** arrivals cover 2000-Q1 to 2023-Q1; hotel inventory covers 2019-2025; AOR covers 2015-2022; the supplied quarterly calendar dimension covers 2018-Q1 to 2027-Q4.
-
-Further details are in [`docs/METHODOLOGY_AND_LIMITATIONS.md`](docs/METHODOLOGY_AND_LIMITATIONS.md) and [`data/README.md`](data/README.md).
+- **Microsoft Power BI Desktop** 
+- **Python 3.12 (Google Colab), pandas, Prophet**
+- **Microsoft Excel and CSV** 
 
 ## Team and acknowledgement
 
@@ -170,9 +143,3 @@ The submitted report and guide identify the following source organisations and r
 - SPAN — water-use benchmark cited in the policy assumptions.
 - UK Department for Environment, Food & Rural Affairs / Department for Energy Security and Net Zero (DEFRA/DESNZ) — carbon benchmark cited in the policy assumptions.
 - United Nations Department of Economic and Social Affairs and UN Tourism — sustainable tourism and SDG context.
-
-Please consult the final report in [`report/`](report/) for the project's academic references and the stated modelling assumptions. Check the original provider's terms before reusing source data.
-
----
-
-*Prepared for DOSM Datathon 2026 by Team Avengers. Submission date stated on the report cover: 22 September 2026.*
